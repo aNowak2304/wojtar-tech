@@ -1,0 +1,125 @@
+@use '../colors' as *;
+
+.nav-desktop {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: none;
+  transition: background-color 0.3s ease-in-out;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    
+    width: 50%;
+  }
+
+  &__img {
+    margin-top: 0.5em;
+    width: 80px;
+  }
+
+  &__right {
+    width: 50%;
+    justify-self: end;
+  }
+
+  &__logo, &__item {
+    color: #ffff;
+    text-decoration: none;
+  }
+
+  &__item {
+    position: relative;
+    padding: 1.5em 2em;
+    font-size: 2rem;
+  }
+
+  &__item::before{
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  transition: right .4s, width .4s, left .4s;
+  }
+
+  &__item:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    &-content {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 84.5px;
+      min-width: 300px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+      background-color: #293C54;
+      transition: opacity 0.5s ease, visibility 0.5s;
+      transform: translateY(-20px);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      
+      &-link {
+        display: block;
+        padding: 1em;
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: #ffff;
+        transition: color 0.5s;
+      }
+
+      &-link:hover{
+        color: #bbbbbb;
+      }
+    }
+
+    &-dropbtn {
+      text-decoration: none;
+      background: none;
+      border: none;
+      color: white;
+      padding: 0;
+      cursor: pointer;
+      outline: inherit;
+
+      .arrow{
+        display: inline-block;
+        transform: rotate(180deg);
+        font-weight: bold;
+        padding-top: 0.1em;
+      }
+    }
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.nav-desktop.scrolled {
+  background-color: #293C54;
+}
+
+@media (min-width: 992px){
+  .nav-desktop{
+    display: block;
+  }
+}

@@ -1,0 +1,78 @@
+@use '../colors' as *;
+
+.footer{
+    padding: 2em 1em;
+    background-color: #E4E4E4;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__box{
+        margin-bottom: 1.2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #0C1A27;
+
+
+        &-icon{
+            margin-right: 1em;
+            width: 30px;
+        }
+    }
+
+    &__box:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 756px){
+    .footer{
+        padding: 3em 1.5em;
+    
+        .wrapper{
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__box{
+            width: 50%;
+            margin-bottom: 1.5em;
+    
+            &-text{
+                font-size: 1.8rem;
+            }
+
+            &-icon{
+                margin-right: 1em;
+                width: 35px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px){
+    .footer{
+    
+
+        &__box{
+            width: 50%;
+            margin-bottom: 2em;
+    
+            &-text{
+                font-size: 2rem;
+            }
+    
+            &-icon{
+                margin-right: 1.5em;
+                width: 40px;
+            }
+        }
+    }
+}

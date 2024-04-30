@@ -1,0 +1,115 @@
+@use '../colors' as *;
+
+.numbers{
+    margin: 0.5em 0;
+    padding: 2em 0;
+    text-align: center;
+    background-color:#117a70;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__box{
+        width: 50%;
+        margin-bottom: 2em;
+
+        &-number{
+            font-weight: bold;
+            font-size: 3rem;
+            letter-spacing: 3px;
+        }
+
+        &-plus{
+            font-size: 3.2rem;
+        }
+
+        &-text{
+ 
+            margin-top: 0.5em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__box:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 756px){
+    .numbers{
+        padding: 3em 0;
+    
+        .wrapper{
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-around;
+        }
+    
+        &__box{
+            max-width: 160px;
+            margin-bottom: 0;
+    
+            &-number{
+                font-weight: bold;
+                font-size: 4rem;
+                letter-spacing: 3px;
+            }
+    
+            &-plus{
+                font-size: 4.4rem;
+            }
+    
+            &-text{
+                font-size: 1.8rem;
+                margin-top: 0.6em;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px){
+    .numbers{
+        margin: 1em 0;
+    
+    
+        &__box{
+    
+            &-number{
+                font-size: 5rem;
+            }
+    
+            &-plus{
+                font-size: 5.4rem;
+            }
+    
+            &-text{
+                margin-top: 0.8em;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    .numbers{
+    
+        &__box{
+            max-width: 160px;
+    
+            &-number{
+                font-size: 6rem;
+            }
+    
+            &-plus{
+                font-size: 6.4rem;
+            }
+    
+            &-text{
+                font-size: 2rem;
+                margin-top: 1em;
+            }
+        }
+    }
+}

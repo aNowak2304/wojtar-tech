@@ -1,0 +1,72 @@
+@use '../colors' as *;
+
+.footer{
+    padding: 1em 0;
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $font-color;
+    }
+
+
+    &__icon{
+        width: 40px;
+        margin: 1em;
+    }
+}
+
+@media(min-width: 768px){
+    .footer{
+        padding: 1.5em 0;
+        &__box{
+            flex-direction: row;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media(min-width: 992px){
+    .footer{
+        padding: 2em 0;
+    
+        &__box{
+            padding: 0 5em;
+            font-size: 1.8rem;
+        }
+
+        &__icon{
+            width: 50px;
+            margin: 1em;
+        }
+    }
+}
+
+
+@media(min-width: 1200px){
+
+    .footer{
+        padding: 3em 0;
+    
+        &__box{
+            padding: 0 7em;
+            font-size: 2.2rem;
+        }
+
+        &__icon{
+            width: 60px;
+            margin: 1em;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use '../colors' as *;
+
+  .nav-desktop{
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: $nav-color;
+
+    .wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__logo, &__item{
+    text-transform: uppercase;
+    color: $nav-font;
+    text-decoration: none;
+    }
+
+    &__logo{
+      font-weight: 500;
+      padding: 0 2em;
+      font-size: 2.2rem;
+    }
+
+    &__item{
+      padding: 1.5em 2em;
+      font-size: 1.6rem;
+    }
+}
